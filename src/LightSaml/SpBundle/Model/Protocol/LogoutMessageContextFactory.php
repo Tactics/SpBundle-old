@@ -21,6 +21,7 @@ use LightSaml\Helper as LightSamlHelper;
 use LightSaml\Model\Protocol\SamlMessage;
 use LightSaml\Model\Protocol\Status;
 use LightSaml\Model\Protocol\StatusCode;
+use LightSaml\Model\XmlDSig\Signature;
 use LightSaml\SamlConstants;
 use LightSaml\State\Sso\SsoSessionState;
 use LightSaml\Store\Credential\CredentialStoreInterface;
@@ -147,7 +148,7 @@ class LogoutMessageContextFactory
     }
 
     /**
-     * @return SignatureWriter
+     * @return Signature
      */
     private function getSignature()
     {
